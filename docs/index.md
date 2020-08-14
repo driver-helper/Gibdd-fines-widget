@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+## Виджет проверки и оплаты штрафов ГИБДД
 
-You can use the [editor on GitHub](https://github.com/driver-helper/Gibdd-fines-widget/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+Виджет позволяет искать и оплачивать неоплаченные штрафы в базе ГИБДД.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Заработок на виджете штрафов ГИБДД Вы заработаете 3% от суммы штрафа, который оплатил посетитель - 30 рублей с оплаты штрафа на сумму 1000 рублей
 
-### Markdown
+Вы будите получать вознаграждение от оплаты каждого нового пользователя который зарегистрируется через виджет на вашем сайте
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Мы сами будем отправлять пользователям оповещения о новых штрафах, а вы будите получать 3% от каждой оплаты.
+
+Код для установки виджета
 
 ```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+<script>
+    var driverHelperFineWidget = {
+        partnerId: 1
+        ,contaiter: 'driverHelperFineWidget'
+        ,width: '100%'
+        ,height: '600px'
+    };
+    (function(w, d, st) {
+        w.st = st;
+        var script = document.createElement('script');
+        script.src = 'https://www.driver-helper.ru/shtrafy-gibdd/widget/inline.js';
+        document.getElementsByTagName("body")[0].appendChild(script);
+    }(window, document, driverHelperFineWidget));
+</script>
+<div id="driverHelperFineWidget"></div>
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/driver-helper/Gibdd-fines-widget/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Сервис [проверки и оплаты штрафов ГИБДД](https://www.driver-helper.ru/shtrafy-gibdd/proverit).
